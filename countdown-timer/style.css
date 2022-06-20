@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  background: url(./img/1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 200;
+  margin-top: 4rem;
+}
+
+.big-text {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.countdown__container {
+  width: 60%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.countdown__num {
+  font-weight: 500;
+}
+.countdown__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.countdown__des {
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
