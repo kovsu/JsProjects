@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <div class="quiz__container">
+      <div class="quiz__header">
+        <h2 class="quiz__title">Question text</h2>
+        <ul class="quiz__content">
+          <li class="quiz__item">
+            <input type="radio" name="answer" id="a" />
+            <label for="a" id="a_text">Answer</label>
+          </li>
+          <li class="quiz__item">
+            <input type="radio" name="answer" id="b" />
+            <label for="b" id="b_text">Answer</label>
+          </li>
+          <li class="quiz__item">
+            <input type="radio" name="answer" id="c" />
+            <label for="c" id="c_text">Answer</label>
+          </li>
+          <li class="quiz__item">
+            <input type="radio" name="answer" id="d" />
+            <label for="d" id="d_text">Answer</label>
+          </li>
+        </ul>
+      </div>
+      <button class="btn">submit</button>
+    </div>
+  </body>
+</html>
