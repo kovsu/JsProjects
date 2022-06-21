@@ -8,3 +8,8 @@ Using typescript to recode these projects
 ## Countdown Timer
 - future date
 - Timer
+
+## Quiz App
+- questions from obj
+- select answer
+- at the end show score
