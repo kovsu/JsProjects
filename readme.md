@@ -13,3 +13,8 @@ Using typescript to recode these projects
 - questions from obj
 - select answer
 - at the end show score
+
+## Recipe App
+- list of recipes
+- recipe info on click
+- fav recipe
