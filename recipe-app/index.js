@@ -2,6 +2,8 @@ const meals = document.querySelector(".meals");
 const favorite = document.querySelector(".favorite__content");
 const search = document.querySelector(".recipe__searchTerm");
 const searchBtn = document.querySelector(".recipe__search");
+const closeBtn = document.querySelector(".close");
+const popup = document.querySelector(".meal-info");
 
 function addMeal(randomMeal, random = false) {
   const meal = document.createElement("div");
@@ -22,8 +24,19 @@ function addMeal(randomMeal, random = false) {
     </section>
   `;
 
+  meal.addEventListener("click", () => {
+    popup.querySelector(".popup__header h2").innerHTML = randomMeal.strMeal;
+    popup
+      .querySelector(".popup__img img")
+      .setAttribute("src", randomMeal.strMealThumb);
+    popup.querySelector(".popup__description").innerHTML =
+      randomMeal.strInstructions;
+    popup.classList.remove("hidden");
+  });
+
   const btn = meal.querySelector(".meal__body .meal__btn");
   btn.addEventListener("click", (e) => {
+    e.preventDefault();
     if (btn.classList.contains("active")) {
       removeMealFromLs(randomMeal.idMeal);
       btn.classList.remove("active");
@@ -135,4 +148,8 @@ searchBtn.addEventListener("click", async () => {
   } else {
     await getRandomMeal();
   }
+});
+
+closeBtn.addEventListener("click", () => {
+  popup.classList.add("hidden");
 });

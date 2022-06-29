@@ -30,6 +30,7 @@ img {
 
 .recipe {
   &__container {
+    position: absolute;
     width: 36rem;
     background-color: #fff;
     border-radius: 3px;
@@ -140,7 +141,6 @@ img {
     color: gray;
     transition: 0.5s;
 
-
     &.active,
     &:hover {
       color: purple;
@@ -186,4 +186,67 @@ img {
     left: -0.6rem;
     border-radius: 1rem 0 0 1rem;
   }
+}
+
+.meal-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow-y: scroll;
+}
+
+
+.popup {
+  &__container {
+    position: relative;
+    width: 50rem;
+    max-height: 100vh;
+    overflow-y: scroll;
+    background-color: #fff;
+  }
+
+  &__header {
+    text-align: center;
+    line-height: 2;
+    font-size: 1.8rem;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    img {
+      width: 30rem;
+      height: 30rem;
+      object-fit: cover;
+    }
+  }
+
+  &__description {
+    padding: 2rem;
+  }
+}
+
+.close {
+  position: absolute;
+  cursor: pointer;
+  top: 1rem;
+  right: 1rem;
+}
+
+.hidden {
+  opacity: 0;
+  user-select: none;
+  z-index: -1;
 }

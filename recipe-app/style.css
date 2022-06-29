@@ -28,6 +28,7 @@ img {
 }
 
 .recipe__container {
+  position: absolute;
   width: 36rem;
   background-color: #fff;
   border-radius: 3px;
@@ -159,6 +160,60 @@ img {
   bottom: -0.6rem;
   left: -0.6rem;
   border-radius: 1rem 0 0 1rem;
+}
+
+.meal-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.popup__container {
+  position: relative;
+  width: 50rem;
+  max-height: 100vh;
+  overflow-y: scroll;
+  background-color: #fff;
+}
+.popup__header {
+  text-align: center;
+  line-height: 2;
+  font-size: 1.8rem;
+}
+.popup__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.popup__img img {
+  width: 30rem;
+  height: 30rem;
+  object-fit: cover;
+}
+.popup__description {
+  padding: 2rem;
+}
+
+.close {
+  position: absolute;
+  cursor: pointer;
+  top: 1rem;
+  right: 1rem;
+}
+
+.hidden {
+  opacity: 0;
+  user-select: none;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=style.css.map */
