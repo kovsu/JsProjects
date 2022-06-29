@@ -28,7 +28,7 @@ img {
 }
 
 .recipe__container {
-  max-width: 36rem;
+  width: 36rem;
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 0 0 5px rgba(51, 51, 51, 0.1019607843);

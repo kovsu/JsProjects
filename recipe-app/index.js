@@ -1,5 +1,7 @@
 const meals = document.querySelector(".meals");
 const favorite = document.querySelector(".favorite__content");
+const search = document.querySelector(".recipe__searchTerm");
+const searchBtn = document.querySelector(".recipe__search");
 
 function addMeal(randomMeal, random = false) {
   const meal = document.createElement("div");
@@ -40,8 +42,9 @@ function getMealsFromLs() {
 }
 
 function addMealToLs(mealId) {
-  const mealsId = getMealsFromLs();
+  const mealsId = JSON.parse(getMealsFromLs());
   localStorage.setItem("mealsId", JSON.stringify([...mealsId, mealId]));
+  renderFavorite();
 }
 
 function removeMealFromLs(mealId) {
@@ -50,6 +53,7 @@ function removeMealFromLs(mealId) {
     "mealsId",
     JSON.stringify(mealsId.filter((id) => id !== mealId))
   );
+  renderFavorite();
 }
 
 async function getRandomMeal() {
@@ -69,11 +73,66 @@ async function getMealById(id) {
   const resp = await fetch(
     `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
   );
-  const meal = await resp.json();
-
-  console.log(meal);
+  const respData = await resp.json();
+  const meal = respData.meals[0];
+  return meal;
 }
 
 async function getMealsBySearch(term) {
-  fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`);
+  const resp = await fetch(
+    `https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`
+  );
+  const respData = await resp.json();
+  const meals = respData.meals;
+  return meals;
 }
+
+async function fetchFavoriteById() {
+  favorite.innerHTML = "";
+
+  const res = [];
+  const mealsId = JSON.parse(getMealsFromLs());
+  for (mealId of mealsId) {
+    let meal = await getMealById(mealId);
+    res.push(meal);
+  }
+  return res;
+}
+
+async function renderFavorite() {
+  const favorites = await fetchFavoriteById();
+
+  favorites.forEach((item) => {
+    const li = document.createElement("li");
+    li.classList.add("favorite__item");
+    li.innerHTML = `
+      <img
+        class="favorite__img"
+        src="${item.strMealThumb}"
+        alt=""
+      />
+      <span class="favorite__name">${item.strMeal}</span>
+    `;
+
+    li.addEventListener("click", () => {
+      removeMealFromLs(item.idMeal);
+    });
+    favorite.appendChild(li);
+  });
+}
+
+renderFavorite();
+
+searchBtn.addEventListener("click", async () => {
+  const val = search.value;
+  meals.innerHTML = "";
+  if (val) {
+    meals.innerHTML = "";
+    const searchRes = await getMealsBySearch(val);
+    searchRes.forEach((item) => {
+      addMeal(item, false);
+    });
+  } else {
+    await getRandomMeal();
+  }
+});
