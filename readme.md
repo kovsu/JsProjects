@@ -18,3 +18,8 @@ Using typescript to recode these projects
 - list of recipes
 - recipe info on click
 - fav recipe
+
+## Notes App
+- CRUD notes
+- markdown
+- localStorage
