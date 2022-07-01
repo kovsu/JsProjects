@@ -78,5 +78,17 @@ body {
   transition: all 0.5s;
   overflow: hidden;
 }
+.notes__textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  resize: none;
+}
+
+.hidden {
+  display: none;
+}
 
 /*# sourceMappingURL=style.css.map */
