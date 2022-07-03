@@ -23,3 +23,8 @@ Using typescript to recode these projects
 - CRUD notes
 - markdown
 - localStorage
+
+
+## ToDo App
+- CRUD todos
+- localStorage
