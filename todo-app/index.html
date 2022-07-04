@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <header class="todo__header">
+      <h1>todos</h1>
+    </header>
+    <div class="todo__container">
+      <div class="todo__input">
+        <span class="todo__input__icon">
+          <i class="fa fa-angle-down"></i>
+        </span>
+        <input type="text" placeholder="What need to be done?" />
+      </div>
+      <ul class="todo__content">
+        <li class="todo__item item-active">
+          <div class="todo__item-status"></div>
+          <div class="todo__info">
+            <p>aa</p>
+          </div>
+          <button class="todo__delete">
+            <i class="fa fa-trash-can"></i>
+          </button>
+        </li>
+        <li class="todo__item">
+          <div class="todo__item-status"></div>
+          <div class="todo__info">
+            <p>bbb</p>
+          </div>
+          <button class="todo__delete">
+            <i class="fa fa-trash-can"></i>
+          </button>
+        </li>
+      </ul>
+      <div class="todo__status">
+        <div class="todo__num">
+          <p>1 item left</p>
+        </div>
+        <div class="todo__bar">
+          <a href="#" class="active-status">All</a>
+          <a href="#">Active</a>
+          <a href="#">Completed</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
