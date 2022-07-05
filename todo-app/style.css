@@ -37,6 +37,10 @@ body {
   padding: 1rem;
   font-size: 3em;
   color: #e8e8e8;
+  cursor: pointer;
+}
+.todo__input__icon:hover {
+  color: #4d4d4d;
 }
 .todo__input input {
   flex: 1;
