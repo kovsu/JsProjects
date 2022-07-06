@@ -92,7 +92,9 @@ body {
   &__name {
     font-size: 1.8rem;
     width: 14rem;
+    padding: 0.5rem 0;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
     margin-left: 1rem;
   }
