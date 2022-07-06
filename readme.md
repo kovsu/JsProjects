@@ -30,5 +30,7 @@ Using typescript to recode these projects
 - localStorage
 
 ## Movie App
-- search for user
-- get show data
+- list of movies
+- movie info
+- fav Movie
+- actors
