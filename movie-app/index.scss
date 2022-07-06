@@ -50,13 +50,16 @@ body {
 
   &__container {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   &__item {
     position: relative;
     width: 20rem;
     background-color: #373b69;
-    margin: 1rem;
+    margin: 2rem;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.3);
