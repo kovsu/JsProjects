@@ -28,3 +28,7 @@ Using typescript to recode these projects
 ## ToDo App
 - CRUD todos
 - localStorage
+
+## Movie App
+- search for user
+- get show data
