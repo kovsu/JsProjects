@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+
+  background-color: #272532;
+}
+
+.movie {
+  &__header {
+    width: 100%;
+    height: 5rem;
+    background-color: #373b69;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+  }
+
+  &__home {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.8rem;
+  }
+
+  &__input {
+    padding: 1rem 1.5rem;
+    width: 20rem;
+    border-radius: 2rem;
+    border: 1px solid #708ed2;
+    outline: none;
+    font-family: inherit;
+    transition: 0.5s;
+
+    &:focus {
+      width: 30rem;
+    }
+  }
+
+  &__container {
+    width: 100%;
+  }
+
+  &__item {
+    position: relative;
+    width: 20rem;
+    background-color: #373b69;
+    margin: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.3);
+  
+    &:hover .movie__details{
+        transform: translateY(0);
+    }
+  }
+
+  &__cover {
+    width: 100%;
+    height: 30rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    line-height: 1;
+  }
+
+  &__name {
+    font-size: 1.8rem;
+    width: 14rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 1rem;
+  }
+
+  &__rate {
+    background-color: #272532;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+
+    &.great {
+      color: rgb(34, 179, 34);
+    }
+
+    &.good {
+      color: rgb(249, 181, 53);
+    }
+
+    &.bad {
+      color: rgb(235, 59, 59);
+    }
+  }
+
+  &__details {
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    // top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+    transform: translateY(102%);
+    overflow: auto;
+    padding: 1rem;
+    transition: 0.5s;
+
+    h3 {
+      padding: 0.5rem 0;
+    }
+  }
+
+
+}
