@@ -34,3 +34,7 @@ Using typescript to recode these projects
 - movie info
 - fav Movie
 - actors
+
+## Github Profiles App
+- search for user
+- get and show data
