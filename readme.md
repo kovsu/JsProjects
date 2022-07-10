@@ -38,3 +38,8 @@ Using typescript to recode these projects
 ## Github Profiles App
 - search for user
 - get and show data
+
+## Weather App
+- enter location
+- get Weather
+- have some icons
