@@ -39,7 +39,7 @@ Using typescript to recode these projects
 - search for user
 - get and show data
 
-## Weather App
+## Weather App(Because of the api server don't run. We can't code this app)
 - enter location
 - get Weather
 - have some icons
